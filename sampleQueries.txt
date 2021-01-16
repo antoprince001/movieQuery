@@ -1,0 +1,36 @@
+mutation{
+  createMovie(input: {
+    movieName : "TENET" 
+    genre : "SCI-FI" 
+    rating : 4
+    language : "ENGLISH" 
+    releaseDate : "December2020"
+    platform :  COMBINED
+    cast : [
+      {
+        firstName :"Robert",
+        lastName : "PAttinson",
+        noOfMovies : 10
+      }
+    ]
+  }){
+    id,
+    movieName
+  }
+}
+
+query{
+  getMovie(id : "5xi6ucAFFwjoK4jYQGzVtV"){
+    id,
+    cast{
+      firstName
+    }
+  }
+}
+
+mutation{
+  deleteMovie(id: "rFMtCUdgYCnxZmgxF3Qun9"){
+    id,
+    movieName
+  }
+}
